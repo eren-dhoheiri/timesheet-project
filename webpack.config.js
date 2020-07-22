@@ -1,29 +1,45 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = {
+const config = {
+  devtool: "cheap-module-source-map",
+  entry: ["./src/index.js"],
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/",
+  },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: "babel-loader",
+        test: /\.js$/,
+        exclude: /node_module/,
       },
       {
-        test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader"
-          }
-        ]
-      }
-    ]
+        use: ["style-loader", "css-loader"],
+        test: /\.css$/,
+      },
+      {
+        use: "url-loader",
+        test: /\.(png|jpg|svg)$/,
+      },
+    ],
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    })
-  ]
+    new HtmlWebpackPlugin({
+      template: "src/index.html",
+    }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
+  devServer: {
+    historyApiFallback: true,
+  },
 };
+
+module.exports = config;
