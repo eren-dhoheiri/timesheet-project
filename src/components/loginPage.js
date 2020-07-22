@@ -38,36 +38,43 @@ class LoginPage extends Component {
 
     return (
       <div className="container mt-5">
-        <h3>Sign In</h3>
-        {!isSuccess ? <div>{message}</div> : <Redirect to="dashboard" />}
-        <form onSubmit={this.onHandleLogin}>
-          <div className="form-group">
-            <label>Email address</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              className="form-control"
-              placeholder="Enter email"
-            />
+        <div className="row">
+          <div class="col-sm">
+            <h1>ini nanti gambar</h1>
           </div>
-          <div className="form-group">
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              className="form-control"
-              placeholder="Enter password"
-            />
+          <div class="col-sm mt-5">
+            <h3>Sign In</h3>
+            {!isSuccess ? <div>{message}</div> : <Redirect to="dashboard" />}
+            <form onSubmit={this.onHandleLogin}>
+              <div className="form-group">
+                <label>Email address</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="form-control"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div className="form-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  className="form-control"
+                  placeholder="Enter password"
+                />
+              </div>
+              <div>
+                <button type="submit" className="btn btn-primary btn-block">
+                  Submit
+                </button>
+              </div>
+            </form>
+            Don't have account? <Link to="register">Register here</Link>
           </div>
-          <div>
-            <button type="submit" className="btn btn-primary btn-block">
-              Submit
-            </button>
-          </div>
-        </form>
-        Don't have account? <Link to="register">Register here</Link>
+        </div>
       </div>
     );
   }
