@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { Link, Redirect } from "react-router-dom";
+import { connect } from "react-redux";
 
-import { registerUserAction } from '../actions/authenticationActions';
+import { registerUserAction } from "../../_actions/authenticationActions";
 
 class RegisterPage extends Component {
   onHandleRegistration = (event) => {
@@ -13,28 +13,30 @@ class RegisterPage extends Component {
     let password = event.target.password.value;
 
     const data = {
-      name, email, password
+      name,
+      email,
+      password,
     };
 
     this.props.dispatch(registerUserAction(data));
-  }
+  };
 
   componentDidMount() {
-    document.title = 'React Login';
+    document.title = "React Login";
   }
 
   render() {
     let message, isSuccess;
 
-    if (this.props.response.register.hasOwnProperty('response')) {
-      isSuccess = this.props.response.register.response.success;
-      message = this.props.response.register.response.message;
+    if (this.props.response.register.hasOwnProperty("response")) {
+      isSuccess = this.props.response.register.success;
+      message = this.props.response.register.message;
     }
-    
+
     return (
       <div>
         <h3>RegisterPage</h3>
-        {!isSuccess ? <div>{message}</div> : <Redirect to='login' />}
+        {!isSuccess ? <div>{message}</div> : <Redirect to="login" />}
         <form onSubmit={this.onHandleRegistration}>
           <div>
             <label htmlFor="name">Name</label>
@@ -52,14 +54,14 @@ class RegisterPage extends Component {
             <button>Register</button>
           </div>
         </form>
-        Already have account? <Link to='login'>Login here</Link>
+        Already have account? <Link to="login">Login here</Link>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (response) => ({
-  response
+  response,
 });
 
 export default connect(mapStateToProps)(RegisterPage);
