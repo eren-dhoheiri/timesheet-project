@@ -3,16 +3,17 @@ export const registerUserService = (request) => {
 
   const parameters = {
     method: "POST",
-    header: {
+    headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(request.user),
   };
 
+  console.log(parameters);
+
   return fetch(REGISTER_API_ENDPOINT, parameters)
     .then((response) => {
-      console.log(json);
       return response.json();
     })
     .then((json) => {
@@ -31,6 +32,8 @@ export const loginUserService = (request) => {
     },
     body: JSON.stringify(request.user),
   };
+
+  console.log(parameters);
 
   return fetch(LOGIN_API_ENDPOINT, parameters)
     .then((response) => {
