@@ -1,6 +1,5 @@
 export const registerUserService = (request) => {
-  // const cors = "https://cors-anywhere.herokuapp.com/";
-  const REGISTER_API_ENDPOINT = "http://localhost:9000/register";
+  const REGISTER_API_ENDPOINT = "http://localhost:8000/register";
 
   const parameters = {
     method: "POST",
@@ -8,8 +7,6 @@ export const registerUserService = (request) => {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     },
-    withCredentials: true,
-    mode: "no-cors",
     body: JSON.stringify(request.user),
   };
 

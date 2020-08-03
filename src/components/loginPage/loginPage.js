@@ -37,7 +37,7 @@ class LoginPage extends Component {
       message = this.props.response.login.response.message;
 
       if (isSuccess) {
-        setCookie("token", this.props.response.login.response.token, 1);
+        setCookie("token", this.props.response.login.response.result.token, 1);
       }
     }
 
