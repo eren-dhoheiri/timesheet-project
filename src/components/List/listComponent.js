@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ListView from "./listView";
 import Update from "../Update/dialog";
 import Add from "../Add/registerPage";
+import Header from "../Header/header";
 
 import {
   usersListAction,
@@ -94,6 +95,7 @@ class HomeComponent extends Component {
 
     return (
       <div>
+        <Header />
         <Add />
         <ListView
           users={this.state.users}

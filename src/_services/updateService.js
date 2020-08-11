@@ -4,7 +4,7 @@ export const updateService = (request) => {
   const NEW_API_ENDPOINT = `http://localhost:8000/users/${request.id.user.id}`;
   console.log(request);
   const parameters = {
-    method: "PUT",
+    method: "PATCH",
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",

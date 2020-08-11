@@ -37,8 +37,8 @@ class Dialog extends Component {
           className={this.props.onShow ? "backdrop show" : "backdrop hide"}
           onClick={this.props.onHandleClose}
         ></div>
-        <div class="card">
-          <div class="card-body">
+        <div className="card">
+          <div className="card-body">
             <div className={this.props.onShow ? "dialog show" : "dialog hide"}>
               <span className="user-info h4">
                 Hit Enter to Finish Updating {this.props.user.username}'s
