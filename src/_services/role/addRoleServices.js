@@ -10,7 +10,7 @@ export const addMEnuService = (request) => {
       "Content-Type": "application/json",
       // Authorization: getCookie("token"),
     },
-    body: JSON.stringify(request.id.user),
+    body: JSON.stringify(request.id.roles),
   };
 
   return fetch(NEW_API_ENDPOINT, parameters)

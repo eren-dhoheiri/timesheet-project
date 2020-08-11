@@ -1,16 +1,16 @@
 import { getCookie } from "../../_utils/cookies";
 
-export const deleteMenuService = (request) => {
-  const NEW_API_ENDPOINT = `https://localhost:44365/api/roles/${request.id.role.id}`;
+export const updateMenuService = (request) => {
+  const NEW_API_ENDPOINT = `https://localhost:44365/api/roles/${request.id.rolemenus.id}`;
   console.log(request);
   const parameters = {
-    method: "DELETE",
+    method: "PUT",
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
       // Authorization: getCookie("token"),
     },
-    body: JSON.stringify(request.id.roles),
+    body: JSON.stringify(request.id.rolemenus),
   };
 
   return fetch(NEW_API_ENDPOINT, parameters)

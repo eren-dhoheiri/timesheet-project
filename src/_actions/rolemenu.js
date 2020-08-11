@@ -6,23 +6,23 @@ export const rolemenuAction = () => {
     };
 };
 
-export const rolemenuAddAction = (role_id) => {
+export const rolemenuAddAction = (id) => {
     return {
         type: types.ADD_ROLE_MENU,
-        role_id,
+        id,
     };
 };
 
-export const rolemenuUpdateAction = (role_id) => {
+export const rolemenuUpdateAction = (id) => {
     return {
         type: types.UPDATE_ROLE_MENU,
-        role_id,
+        id,
     };
 };
 
-export const rolemenuDeleteAction = (role_id) => {
+export const rolemenuDeleteAction = (id) => {
     return {
         type: types.DELETE_ROLE_MENU,
-        role_id,
+        id,
     };
 };
