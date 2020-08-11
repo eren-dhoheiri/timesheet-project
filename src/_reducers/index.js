@@ -14,10 +14,10 @@ import roleReducer from "./role/roleReducer";
 import deleteRoleReducer from "./role/deleteRoleReducer";
 import updateRoleReducer from "./role/updateRoleReducer";
 //RoleMenu
-import addRolemenuReducer from "./rolemenu/addRolemenuReducer";
-import rolemenuReducer from "./rolemenu/rolemenuReducer";
-import deleteRolemenuReducer from "./rolemenu/deleteRolemenuReducer";
-import updateRolemenuReducer from "./rolemenu/updateRolemenuReducer";
+import addRolemenuReducers from "./rolemenu/addRolemenuReducers";
+import rolemenuReducers from "./rolemenu/rolemenuReducers";
+import deleteRolemenuReducers from "./rolemenu/deleteRolemenuReducers";
+import updateRolemenuReducers from "./rolemenu/updateRolemenuReducers";
 
 const rootReducer = combineReducers({
   register,
@@ -33,10 +33,10 @@ const rootReducer = combineReducers({
   roleReducer,
   updateRoleReducer,
   deleteRoleReducer,
-  addRolemenuReducer,
-  rolemenuReducer,
-  updateRolemenuReducer,
-  deleteRolemenuReducer
+  addRolemenuReducers,
+  rolemenuReducers,
+  updateRolemenuReducers,
+  deleteRolemenuReducers
 });
 
 export default rootReducer;
