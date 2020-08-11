@@ -1,7 +1,8 @@
-/* body {
-    background-color: #fff;
-    min-height: 100vh;
-} */
+.error {
+    color: #f91e5c;
+    padding-bottom: 2em;
+    padding-left: 8em;
+}
 
 .brand-wrapper {
     padding-top: 7px;

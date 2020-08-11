@@ -1,0 +1,38 @@
+table thead,
+table thead tr,
+table tbody,
+table tbody tr {
+  padding: 0.5em;
+}
+
+table thead,
+table tbody {
+  border-radius: 0.19em;
+}
+
+table {
+  width: 99%;
+}
+
+table thead {
+  margin-bottom: 0.3em;
+}
+
+table thead tr {
+  width: 100%;
+}
+
+table thead tr th {
+  width: 15em;
+  text-align: left;
+  font-weight: bold;
+}
+
+table tbody tr td {
+  width: 15em;
+  text-align: left;
+}
+
+.actions {
+  text-align: right;
+}

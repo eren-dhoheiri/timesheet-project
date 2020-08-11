@@ -83,7 +83,11 @@ class LoginPage extends Component {
               <p className="login-wrapper-footer-text">
                 Don't have an account? <Link to="register">Register here</Link>
               </p>
-              {!isSuccess ? <div>{message}</div> : <Redirect to="home" />}
+              {!isSuccess ? (
+                <div className="error">{message}</div>
+              ) : (
+                <Redirect to="home" />
+              )}
             </div>
           </div>
         </div>
