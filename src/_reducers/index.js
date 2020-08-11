@@ -1,9 +1,13 @@
 import { combineReducers } from "redux";
-import register from "./registerReducer";
+import register from "./user/registerReducer";
 import login from "./loginReducer";
-import homeReducer from "./homeReducer";
-import deleteReducer from "./deleteReducer";
-import updateReducer from "./updateReducer";
+import homeReducer from "./user/homeReducer";
+import deleteReducer from "./user/deleteReducer";
+import updateReducer from "./user/updateReducer";
+import addMenuReducer from "./menu/addMenuReducer";
+import menuReducer from "./menu/menuReducer";
+import deleteMenuReducer from "./menu/deleteMenuReducer";
+import updateMenuReducer from "./menu/updateMenuReducer";
 
 const rootReducer = combineReducers({
   register,
@@ -11,6 +15,10 @@ const rootReducer = combineReducers({
   homeReducer,
   deleteReducer,
   updateReducer,
+  addMenuReducer,
+  menuReducer,
+  updateMenuReducer,
+  deleteMenuReducer,
 });
 
 export default rootReducer;

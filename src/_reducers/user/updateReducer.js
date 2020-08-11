@@ -1,4 +1,4 @@
-import * as types from "../_actions";
+import * as types from "../../_actions";
 
 export default function (state = [], action) {
   let response = action.response;

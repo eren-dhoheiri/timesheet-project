@@ -1,10 +1,10 @@
-import { getCookie } from "../_utils/cookies";
+import { getCookie } from "../../_utils/cookies";
 
-export const updateService = (request) => {
-  const NEW_API_ENDPOINT = `http://localhost:8000/users/${request.id.user.id}`;
+export const addMEnuService = (request) => {
+  const NEW_API_ENDPOINT = `http://localhost:8000/api/MenuItems`;
   console.log(request);
   const parameters = {
-    method: "PATCH",
+    method: "POST",
     headers: {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",

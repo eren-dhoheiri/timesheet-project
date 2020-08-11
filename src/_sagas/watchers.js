@@ -1,8 +1,8 @@
 import { takeLatest } from "redux-saga/effects";
 import { registerSaga, loginSaga } from "./authenticationSaga";
-import { homeSaga } from "./homeSaga";
-import { deleteSaga } from "./deleteSaga";
-import { updateSaga } from "./updateSaga";
+import { homeSaga } from "./user/homeSaga";
+import { deleteSaga } from "./user/deleteSaga";
+import { updateSaga } from "./user/updateSaga";
 
 import * as types from "../_actions";
 

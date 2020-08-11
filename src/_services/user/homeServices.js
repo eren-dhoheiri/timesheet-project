@@ -1,19 +1,19 @@
-import { getCookie } from "../_utils/cookies";
+import { getCookie } from "../../_utils/cookies";
 
-export const deleteService = (request) => {
-  const NEW_API_ENDPOINT = `http://localhost:8000/users/${request.id.id}`;
+export const homeService = (request) => {
+  const NEW_API_ENDPOINT = "http://localhost:8000/users";
 
   const parameters = {
-    method: "DELETE",
+    method: "GET",
     headers: {
       "Content-Type": "application/json",
       Authorization: getCookie("token"),
     },
-    body: JSON.stringify(request.id),
   };
 
   return fetch(NEW_API_ENDPOINT, parameters)
     .then((response) => {
+      // console.log(response);
       return response.json();
     })
     .then((json) => {

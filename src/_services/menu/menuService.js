@@ -1,7 +1,7 @@
-import { getCookie } from "../_utils/cookies";
+import { getCookie } from "../../_utils/cookies";
 
-export const homeService = (request) => {
-  const NEW_API_ENDPOINT = "http://localhost:8000/users";
+export const menuService = (request) => {
+  //   const NEW_API_ENDPOINT = "http://localhost:8000/api/MenuItems";
 
   const parameters = {
     method: "GET",

@@ -1,7 +1,7 @@
 import { put, call } from "redux-saga/effects";
-import { updateService } from "../_services/updateService";
+import { updateService } from "../../_services/user/updateService";
 
-import * as types from "../_actions";
+import * as types from "../../_actions";
 
 export function* updateSaga(payload) {
   try {

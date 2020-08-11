@@ -1,7 +1,7 @@
 import { put, call } from "redux-saga/effects";
-import { deleteService } from "../_services/deleteService";
+import { deleteService } from "../../_services/user/deleteService";
 
-import * as types from "../_actions";
+import * as types from "../../_actions";
 
 export function* deleteSaga(payload) {
   try {
