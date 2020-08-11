@@ -8,6 +8,6 @@ export function* roleSaga(payload) {
     const response = yield call(roleService, payload);
     yield [put({ type: types.FETCH_ROLE_SUCCESS, response })];
   } catch (error) {
-    yield put({ type: types.FETCH_ROLE_SUCCESS, error });
+    yield put({ type: types.FETCH_ROLE_ERROR, error });
   }
 }
