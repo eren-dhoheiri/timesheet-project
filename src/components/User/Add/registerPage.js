@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import "./register.css";
 
-import { registerUserAction } from "../../_actions/authenticationActions";
+import { registerUserAction } from "../../../_actions/authenticationActions";
 
 class RegisterPage extends Component {
   onHandleRegistration = (event) => {

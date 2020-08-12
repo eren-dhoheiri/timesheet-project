@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import PrivateRoute from "./privateRoute";
 import LoginPage from "../components/loginPage/loginPage";
-import List from "../components/List/listComponent";
-import Home from "../components/Home/Home";
+import List from "../components/User/List/listComponent";
+import Menu from "../components/Menu/menu";
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
             <Route path="/" exact component={LoginPage} />
             <Route path="/login" component={LoginPage} />
             <PrivateRoute path="/home" component={List} />
-            <PrivateRoute path="/homeuser" component={Home} />
+            <PrivateRoute path="/menu" component={Menu} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import ListView from "./listView";
-import Update from "../Update/dialog";
+import Update from "../../User/Update/dialog";
 import Add from "../Add/registerPage";
 import Header from "../Header/header";
 
