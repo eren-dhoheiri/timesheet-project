@@ -1,5 +1,5 @@
 import { put, call } from "redux-saga/effects";
-import { homeService } from "../../../_services/user/homeServices";
+import { homeService } from "../../_services/user/homeServices";
 
 import * as types from "../../_actions";
 

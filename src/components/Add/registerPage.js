@@ -20,6 +20,14 @@ class RegisterPage extends Component {
     };
 
     this.props.dispatch(registerUserAction(user));
+
+    // console.log(this.props);
+    // if (this.props.response.register.response.success) {
+    //   window.location.reload();
+    // } else {
+    //   alert(this.props.response.register.response.password[0]);
+    // }
+    window.location.reload();
   };
 
   componentDidMount() {

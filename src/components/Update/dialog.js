@@ -27,8 +27,8 @@ class Dialog extends Component {
     let message = "Oke";
 
     // if (this.props.props.updateuserReducer.hasOwnProperty("response")) {
-    //   success = this.props.props.updateuserReducer.response.success;
-    //   message = this.props.props.updateuserReducer.response.message;
+    //   success = this.props.props.updateUserReducer.response.success;
+    //   message = this.props.props.updateUserReducer.response.message;
     // }
 
     return (

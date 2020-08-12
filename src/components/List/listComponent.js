@@ -54,7 +54,7 @@ class HomeComponent extends Component {
 
   onHandleUpdate(event) {
     event.preventDefault();
-    console.log("masuk");
+    // console.log("masuk");
     const user = {
       id: this.state.user.id,
       username: event.target.username.value,
@@ -62,12 +62,16 @@ class HomeComponent extends Component {
       password: event.target.password.value,
     };
 
-    console.log(user);
+    // console.log(user);
     this.props.dispatch(
       userUpdateAction({
         user: user,
       })
     );
+
+    this.setState({ isDialog: false }, () => {
+      window.location.reload();
+    });
   }
 
   onHandleClose() {
@@ -82,6 +86,8 @@ class HomeComponent extends Component {
         id: id,
       })
     );
+
+    window.location.reload();
   }
 
   render() {
