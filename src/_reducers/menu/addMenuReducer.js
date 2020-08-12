@@ -1,7 +1,8 @@
 import * as types from "../../_actions";
 
 export default function (state = [], action) {
-  const response = action.response;
+  let response = action.response;
+  console.log(response);
 
   switch (action.type) {
     case types.ADD_MENU_SUCCESS:

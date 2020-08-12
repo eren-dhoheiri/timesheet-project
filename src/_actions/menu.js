@@ -6,10 +6,10 @@ export const menuAction = () => {
   };
 };
 
-export const menuAddAction = (id) => {
+export const menuAddAction = (menu) => {
   return {
     type: types.ADD_MENU,
-    id,
+    menu,
   };
 };
 

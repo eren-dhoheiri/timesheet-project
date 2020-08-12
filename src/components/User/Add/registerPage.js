@@ -45,7 +45,7 @@ class RegisterPage extends Component {
 
     return (
       <div className="container form mx-auto mb-5 mt-5 ">
-        <div className="card text-white bg-primary mb-3">
+        <div className="card text-black mb-3">
           <h3 className="card-header mb-4">Add User Form</h3>
           {!isSuccess ? <div>{message}</div> : <Redirect to="/home" />}
           <div className="card-body">

@@ -1,7 +1,7 @@
 import { getCookie } from "../../_utils/cookies";
 
-export const addMEnuService = (request) => {
-  const NEW_API_ENDPOINT = `http://localhost:8000/api/MenuItems`;
+export const addMenuService = (request) => {
+  const NEW_API_ENDPOINT = `http://localhost:5000/api/MenuItems`;
   console.log(request);
   const parameters = {
     method: "POST",
@@ -10,7 +10,7 @@ export const addMEnuService = (request) => {
       "Content-Type": "application/json",
       // Authorization: getCookie("token"),
     },
-    body: JSON.stringify(request.id.user),
+    body: JSON.stringify(request.menu),
   };
 
   return fetch(NEW_API_ENDPOINT, parameters)

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./list.css";
+import "../../User/List/list.css";
 
 class HomeView extends Component {
   render() {
@@ -12,48 +12,33 @@ class HomeView extends Component {
           <thead>
             <tr>
               <th>ID</th>
-              <th>Username</th>
-              <th>Email</th>
+              <th>Label</th>
+              <th>Parent</th>
+              <th>Path</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            {this.props.users.map((li, index) => (
+            {this.props.menus.map((li, index) => (
               <tr
                 key={li.id}
-                className={
-                  this.props.users.length - 1 == index ? "last" : "none"
-                }
+                // className={
+                //   this.props.users.length - 1 == index ? "last" : "none"
+                // }
               >
-                <td>
-                  {/* <Link
-                    // className="name"
-                    // to={`${this.props.match.path}/users/${li.id}`}
-                    to="/"
-                  >
-                    {li.id}
-                  </Link> */}
-                  {li.id}
-                </td>
-                <td>
-                  {/* <Link
-                    // className="name"
-                    // to={`${this.props.match.path}/users/${li.id}`}
-                    to="/"
-                  >
-                    {li.username}
-                  </Link> */}
-                  {li.username}
-                </td>
-                <td>{li.email}</td>
+                <td>{li.id}</td>
+                <td>{li.label}</td>
+                <td>{li.parent}</td>
+                <td>{li.path}</td>
                 <td className="actions">
                   <button
                     className="links link btn btn-warning mr-3"
                     onClick={() =>
                       this.props.onUpdateHandle({
                         id: li.id,
-                        username: li.username,
-                        email: li.email,
+                        label: li.username,
+                        parent: li.email,
+                        path: li.path,
                       })
                     }
                   >

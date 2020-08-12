@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./privateRoute";
 import LoginPage from "../components/loginPage/loginPage";
 import List from "../components/User/List/listComponent";
-import Menu from "../components/Menu/menu";
+import Menu from "../components/Menu/MenuList/menuComponent.js";
 
 class App extends Component {
   render() {

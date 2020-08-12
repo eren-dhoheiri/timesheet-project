@@ -1,7 +1,7 @@
 import { getCookie } from "../../_utils/cookies";
 
 export const menuService = (request) => {
-  //   const NEW_API_ENDPOINT = "http://localhost:8000/api/MenuItems";
+  const NEW_API_ENDPOINT = "http://localhost:5000/api/menuitems";
 
   const parameters = {
     method: "GET",
