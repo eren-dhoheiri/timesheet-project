@@ -6,10 +6,10 @@ export const roleAction = () => {
   };
 };
 
-export const roleAddAction = (id) => {
+export const roleAddAction = (role) => {
   return {
     type: types.ADD_ROLE,
-    id,
+    role,
   };
 };
 

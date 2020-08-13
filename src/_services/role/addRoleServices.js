@@ -1,7 +1,7 @@
 import { getCookie } from "../../_utils/cookies";
 
-export const addMEnuService = (request) => {
-  const NEW_API_ENDPOINT = `https://localhost:44365/api/roles`;
+export const addRoleServices = (request) => {
+  const NEW_API_ENDPOINT = `http://localhost:58884/api/roles`;
   console.log(request);
   const parameters = {
     method: "POST",
@@ -10,7 +10,7 @@ export const addMEnuService = (request) => {
       "Content-Type": "application/json",
       // Authorization: getCookie("token"),
     },
-    body: JSON.stringify(request.id.roles),
+    body: JSON.stringify(request.role),
   };
 
   return fetch(NEW_API_ENDPOINT, parameters)

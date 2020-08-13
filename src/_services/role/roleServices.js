@@ -1,7 +1,7 @@
 import { getCookie } from "../../_utils/cookies";
 
-export const menuService = (request) => {
-  const NEW_API_ENDPOINT = "https://localhost:44365/api/roles";
+export const roleServices = (request) => {
+  const NEW_API_ENDPOINT = "http://localhost:58884/api/roles";
   const parameters = {
     method: "GET",
     headers: {
