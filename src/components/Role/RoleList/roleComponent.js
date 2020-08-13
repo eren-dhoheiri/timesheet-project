@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import Header from "../../Header/header";
 import RoleView from "./roleView";
 import UpdateRole from "../UpdateRole/updateRole";
-import AddRole from "../AddRole/addRole";
+import AddRole from "../addRole/addRole";
 
 import {
   roleAction,
@@ -92,7 +92,7 @@ export class RoleComponent extends Component {
       );
     }
     console.log(this.state);
-    console.log(this.props)
+    console.log(this.props);
 
     const { match } = this.props;
 

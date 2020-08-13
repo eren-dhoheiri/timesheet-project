@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "../../User/Update/dialog.css";
 
 class UpdateRole extends Component {
   state = {

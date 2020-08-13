@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "../../User/List/list.css";
-
 class RoleView extends Component {
   render() {
     // console.log(this.props);
@@ -18,9 +16,7 @@ class RoleView extends Component {
           </thead>
           <tbody>
             {this.props.roles.map((li, index) => (
-              <tr
-                key={li.id}
-              >
+              <tr key={li.id}>
                 <td>{li.id}</td>
                 <td>{li.label}</td>
                 <td className="actions">
