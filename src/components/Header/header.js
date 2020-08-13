@@ -13,7 +13,7 @@ export class header extends Component {
   render() {
     const { navCollapsed } = this.state;
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <Link to="/home" className="navbar-brand">
           Timesheet Celerates
         </Link>
@@ -30,8 +30,8 @@ export class header extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className={(navCollapsed ? "collapse" : "") + " navbar-collapse"}>
-          <ul className="navbar-nav">
-            <li className="nav-item active">
+          <ul className="nav navbar-nav ml-auto">
+            <li className="nav-item">
               <Link to="/home" className="nav-link">
                 Home
               </Link>

@@ -48,7 +48,7 @@ class HomeView extends Component {
                 <td>{li.email}</td>
                 <td className="actions">
                   <button
-                    className="links link btn btn-warning mr-3"
+                    className="links link btn btn-warning text-white mr-3"
                     onClick={() =>
                       this.props.onUpdateHandle({
                         id: li.id,

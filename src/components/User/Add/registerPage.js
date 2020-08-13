@@ -78,7 +78,7 @@ class RegisterPage extends Component {
                 />
               </div>
               <div>
-                <button className="btn btn-warning">Submit</button>
+                <button className="btn btn-warning text-white">Submit</button>
               </div>
             </form>
           </div>
