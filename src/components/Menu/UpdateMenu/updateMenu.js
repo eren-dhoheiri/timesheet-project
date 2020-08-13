@@ -11,7 +11,7 @@ class UpdateMenu extends Component {
   onHandleUpdate = (event) => {
     event.preventDefault();
 
-    let id = this.props.props.id;
+    let id = this.props.menu.id;
     let label = event.target.label.value;
     let parent = event.target.parent.value;
     let path = event.target.path.value;
@@ -43,7 +43,7 @@ class UpdateMenu extends Component {
                   type="text"
                   name="label"
                   id="label"
-                  defaultValue={this.props.props.label}
+                  // defaultValue={this.props.menu.label}
                 />
               </div>
               <div className="form-group">
@@ -53,7 +53,7 @@ class UpdateMenu extends Component {
                   type="text"
                   name="parent"
                   id="parent"
-                  defaultValue={this.props.props.parent}
+                  // defaultValue={this.props.menu.parent}
                 />
               </div>
               <div className="form-group">
@@ -63,7 +63,7 @@ class UpdateMenu extends Component {
                   type="text"
                   name="path"
                   id="path"
-                  defaultValue={this.props.props.path}
+                  defaultValue={this.props.menu.path}
                 />
               </div>
               <div>

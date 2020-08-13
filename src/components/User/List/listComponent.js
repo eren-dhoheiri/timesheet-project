@@ -45,7 +45,7 @@ class ListComponent extends Component {
               }
               modal
             >
-              <Update props={user} />
+              <Update user={user} />
             </Popup>
             <button
               className="btn btn-danger btn-sm"

@@ -22,19 +22,10 @@ export class addMenu extends Component {
   };
 
   render() {
-    // console.log(this.props);
-    // let message, isSuccess;
-
-    // if (this.props.response.register.hasOwnProperty("response")) {
-    //   isSuccess = this.props.response.register.response.success;
-    //   message = this.props.response.register.response.message;
-    // }
-
     return (
       <div className="container form mx-auto mb-5 mt-5 ">
         <div className="card text-black mb-3">
           <h3 className="card-header mb-4">Add Menu Form</h3>
-          {/* {!isSuccess ? <div>{message}</div> : <Redirect to="/menu" />} */}
           <div className="card-body">
             <form onSubmit={this.onHandleSubmit}>
               <div className="form-group">

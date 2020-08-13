@@ -38,7 +38,7 @@ export class MenuComponent extends Component {
     {
       key: "action",
       text: "Action",
-      cell: (user, index) => {
+      cell: (menu, index) => {
         return (
           <Fragment>
             <Popup
@@ -49,11 +49,11 @@ export class MenuComponent extends Component {
               }
               modal
             >
-              <UpdateMenu props={user} />
+              <UpdateMenu menu={menu} />
             </Popup>
             <button
               className="btn btn-danger btn-sm"
-              onClick={this.deleteRecord.bind(this, user, index)}
+              onClick={this.deleteRecord.bind(this, menu, index)}
             >
               Delete
             </button>
@@ -102,7 +102,7 @@ export class MenuComponent extends Component {
 
   render() {
     // console.log(this.props);
-    console.log(this.state);
+    // console.log(this.state);
     if (this.state.menus === undefined || this.state.menus.length === 0) {
       return (
         <div>

@@ -11,7 +11,7 @@ export class updateMenu extends Component {
   onHandleUpdate = (event) => {
     event.preventDefault();
 
-    let id = this.props.props.id;
+    let id = this.props.user.id;
     let username = event.target.username.value;
     let email = event.target.email.value;
     let password = event.target.password.value;
@@ -43,7 +43,7 @@ export class updateMenu extends Component {
                   type="text"
                   username="username"
                   id="username"
-                  defaultValue={this.props.props.username}
+                  defaultValue={this.props.user.username}
                 />
               </div>
               <div className="form-group">
@@ -53,7 +53,7 @@ export class updateMenu extends Component {
                   type="email"
                   username="email"
                   id="email"
-                  defaultValue={this.props.props.email}
+                  defaultValue={this.props.user.email}
                 />
               </div>
               <div className="form-group">
