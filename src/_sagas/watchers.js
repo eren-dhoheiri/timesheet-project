@@ -7,6 +7,11 @@ import { menuSaga } from "./menu/menuSaga";
 import { deleteMenuSaga } from "./menu/deleteMenuSaga";
 import { updateMenuSaga } from "./menu/updateMenuSaga";
 import { addMenuSaga } from "./menu/addMenuSaga";
+//Role
+import { roleSaga } from "./role/roleSaga";
+import { addRoleSaga } from "./role/addRoleSaga";
+import { deleteRoleSaga } from "./role/deleteRoleSaga";
+import { updateRoleSaga } from "./role/updateRoleSaga";
 
 import * as types from "../_actions";
 
@@ -20,4 +25,9 @@ export default function* watchUserAuthentication() {
   yield takeLatest(types.ADD_MENU, addMenuSaga);
   yield takeLatest(types.DELETE_MENU, deleteMenuSaga);
   yield takeLatest(types.UPDATE_MENU, updateMenuSaga);
+  //Role
+  yield takeLatest(types.FETCH_ROLE, roleSaga);
+  yield takeLatest(types.ADD_ROLE, addRoleSaga);
+  yield takeLatest(types.DELETE_ROLE, deleteRoleSaga);
+  yield takeLatest(types.UPDATE_ROLE, updateRoleSaga);
 }

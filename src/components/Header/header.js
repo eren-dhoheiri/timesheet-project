@@ -41,6 +41,11 @@ export class header extends Component {
                 Menu
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/role" className="nav-link">
+                Role
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

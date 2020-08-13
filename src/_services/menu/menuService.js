@@ -6,8 +6,9 @@ export const menuService = (request) => {
   const parameters = {
     method: "GET",
     headers: {
+      // "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
-      Authorization: getCookie("token"),
+      // Authorization: getCookie("token"),
     },
   };
 
