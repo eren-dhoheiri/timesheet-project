@@ -10,7 +10,7 @@ export const registerUserService = (request) => {
     body: JSON.stringify(request.user),
   };
 
-  console.log(parameters);
+  // console.log(parameters);
 
   return fetch(REGISTER_API_ENDPOINT, parameters)
     .then((response) => {
@@ -33,7 +33,7 @@ export const loginUserService = (request) => {
     body: JSON.stringify(request.user),
   };
 
-  console.log(parameters);
+  // console.log(parameters);
 
   return fetch(LOGIN_API_ENDPOINT, parameters)
     .then((response) => {

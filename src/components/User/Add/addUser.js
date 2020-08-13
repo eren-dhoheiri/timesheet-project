@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import "./register.css";
 
 import { registerUserAction } from "../../../_actions/authenticationActions";
 
-class RegisterPage extends Component {
+class addMenu extends Component {
   onHandleRegistration = (event) => {
     event.preventDefault();
 
@@ -21,33 +20,14 @@ class RegisterPage extends Component {
 
     this.props.dispatch(registerUserAction(user));
 
-    // console.log(this.props);
-    // if (this.props.response.register.response.success) {
-    //   window.location.reload();
-    // } else {
-    //   alert(this.props.response.register.response.password[0]);
-    // }
     window.location.reload();
   };
 
-  componentDidMount() {
-    document.title = "Timesheet";
-  }
-
   render() {
-    console.log(this.props);
-    let message, isSuccess;
-
-    if (this.props.response.register.hasOwnProperty("response")) {
-      isSuccess = this.props.response.register.response.success;
-      message = this.props.response.register.response.message;
-    }
-
     return (
-      <div className="container form mx-auto mb-5 mt-5 ">
+      <div className="container mx-auto mb-5 mt-5">
         <div className="card text-black mb-3">
           <h3 className="card-header mb-4">Add User Form</h3>
-          {!isSuccess ? <div>{message}</div> : <Redirect to="/home" />}
           <div className="card-body">
             <form onSubmit={this.onHandleRegistration}>
               <div className="form-group">
@@ -92,4 +72,4 @@ const mapStateToProps = (response) => ({
   response,
 });
 
-export default connect(mapStateToProps)(RegisterPage);
+export default connect(mapStateToProps)(addMenu);

@@ -2,7 +2,7 @@ import { getCookie } from "../../_utils/cookies";
 
 export const addMEnuService = (request) => {
   const NEW_API_ENDPOINT = `https://localhost:44365/api/rolemenus`;
-  console.log(request);
+  // console.log(request);
   const parameters = {
     method: "POST",
     headers: {
@@ -15,7 +15,7 @@ export const addMEnuService = (request) => {
 
   return fetch(NEW_API_ENDPOINT, parameters)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       return response.json();
     })
     .then((json) => {

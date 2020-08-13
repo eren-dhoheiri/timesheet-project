@@ -2,7 +2,7 @@ import { getCookie } from "../../_utils/cookies";
 
 export const deleteMenuService = (request) => {
   const NEW_API_ENDPOINT = `https://localhost:44365/api/roles/${request.id.role.id}`;
-  console.log(request);
+  // console.log(request);
   const parameters = {
     method: "DELETE",
     headers: {
@@ -15,7 +15,7 @@ export const deleteMenuService = (request) => {
 
   return fetch(NEW_API_ENDPOINT, parameters)
     .then((response) => {
-      console.log(response);
+      // console.log(response);
       return response.json();
     })
     .then((json) => {
