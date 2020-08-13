@@ -99,7 +99,7 @@ class ListComponent extends Component {
   }
 
   render() {
-    // console.log(this.state);
+    console.log(this);
     if (this.state.users === undefined || this.state.users.length === 0) {
       return <div>No user</div>;
     }

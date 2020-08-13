@@ -12,10 +12,11 @@ class Logout extends Component {
   }
 
   componentDidMount() {
-    document.title = "Celerates";
+    <Redirect to="/" />;
   }
 
   render() {
+    console.log(this);
     return (
       <div>
         <Redirect to="/" />

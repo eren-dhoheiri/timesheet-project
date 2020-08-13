@@ -80,9 +80,6 @@ class LoginPage extends Component {
                   </button>
                 </div>
               </form>
-              <p className="login-wrapper-footer-text">
-                Don't have an account? <Link to="register">Register here</Link>
-              </p>
               {!isSuccess ? (
                 <div className="error">{message}</div>
               ) : (
