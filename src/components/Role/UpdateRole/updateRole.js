@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import {connect} from "react-redux";
+import {roleUpdateAction} from "../../../_actions/role";
 
 class UpdateRole extends Component {
   state = {
@@ -15,10 +17,6 @@ class UpdateRole extends Component {
     let success = "Success";
     let message = "Oke";
 
-    // if (this.props.props.updateuserReducer.hasOwnProperty("response")) {
-    //   success = this.props.props.updateUserReducer.response.success;
-    //   message = this.props.props.updateUserReducer.response.message;
-    // }
 
     return (
       <div className="container mx-auto mt-5 mb-5">

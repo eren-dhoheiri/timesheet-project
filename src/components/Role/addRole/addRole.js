@@ -18,14 +18,6 @@ export class addRole extends Component {
   };
 
   render() {
-    // console.log(this.props);
-    // let message, isSuccess;
-
-    // if (this.props.response.register.hasOwnProperty("response")) {
-    //   isSuccess = this.props.response.register.response.success;
-    //   message = this.props.response.register.response.message;
-    // }
-
     return (
       <div className="container form mx-auto mb-5 mt-5 ">
         <div className="card text-black mb-3">
@@ -43,7 +35,7 @@ export class addRole extends Component {
                 />
               </div>
               <div>
-                <button className="btn btn-warning">Submit</button>
+                <button className="btn btn-warning text white">Submit</button>
               </div>
             </form>
           </div>

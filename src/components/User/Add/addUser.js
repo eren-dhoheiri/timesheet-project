@@ -20,7 +20,7 @@ class addMenu extends Component {
 
     this.props.dispatch(registerUserAction(user));
 
-    window.location.reload();
+    // window.location.reload();
   };
 
   render() {

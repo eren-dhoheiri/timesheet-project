@@ -26,7 +26,7 @@ class UpdateMenu extends Component {
 
     this.props.dispatch(menuUpdateAction(menu));
 
-    window.location.reload();
+    // window.location.reload();
   };
 
   render() {
